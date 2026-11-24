@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-
 import {
   Box,
   Typography,
@@ -11,7 +10,6 @@ import {
 } from "@mui/material";
 
 import SearchIcon from "@mui/icons-material/Search";
-
 import StudentTable from "../components/StudentTable";
 import { students as initialStudents } from "../data/student";
 import type { Student } from "../data/student";

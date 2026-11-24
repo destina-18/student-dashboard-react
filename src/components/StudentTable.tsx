@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { ChangeEvent, MouseEvent } from "react";
-
 import {
   Box,
   Card,
@@ -24,12 +23,10 @@ import {
   MenuItem,
   Tooltip,
 } from "@mui/material";
-
 import AddIcon from "@mui/icons-material/Add";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CloseIcon from "@mui/icons-material/Close";
-
 import type { Student } from "../data/student";
 
 type StudentTableProps = {

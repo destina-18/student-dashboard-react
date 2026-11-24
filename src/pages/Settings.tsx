@@ -1,6 +1,4 @@
-
 import { useState, type ChangeEvent, type FormEvent } from "react";
-
 import {
   Alert,
   Avatar,
@@ -16,7 +14,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-
 import BadgeIcon from "@mui/icons-material/Badge";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";

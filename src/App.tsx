@@ -1,11 +1,7 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-
 import DashboardLayout from "./layouts/DasboardLayout";
-
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import Settings from "./pages/Settings";

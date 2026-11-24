@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   Box,
   Card,
@@ -14,7 +13,6 @@ import {
   TableRow,
   TablePagination,
 } from "@mui/material";
-
 import PeopleIcon from "@mui/icons-material/People";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
@@ -24,7 +22,7 @@ import StatCard from "../components/StatCard";
 
 import { students } from "../data/student";
 
-// Urutan tingkat 
+// tingkat 
 const GRADE_ORDER: Record<string, number> = {
   X: 1,
   XI: 2,
@@ -67,7 +65,7 @@ export default function DashboardContent() {
     students.map((student) => student.class)
   ).size;
 
-  // Data siswa per kelas
+  // data per kelas
   const classData = Array.from(
     new Set(students.map((student) => student.class))
   )
@@ -94,7 +92,7 @@ export default function DashboardContent() {
 
   const maleArc = (malePercent / 100) * CIRCUMFERENCE;
 
-  // Pagination tabel dashboard
+  // pagination tabel dashboard
   const displayedStudents = students.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
