@@ -1,3 +1,4 @@
+
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import {
   Alert,
@@ -14,6 +15,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+
 import BadgeIcon from "@mui/icons-material/Badge";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
@@ -24,7 +26,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import SaveIcon from "@mui/icons-material/Save";
 import SchoolIcon from "@mui/icons-material/School";
 import VerifiedIcon from "@mui/icons-material/Verified";
-
 
 const PRIMARY = "#b71c1c";
 const PRIMARY_DARK = "#921616";
@@ -59,7 +60,9 @@ function SectionTitle({
 }) {
   return (
     <Box sx={{ mb: 3 }}>
-      <Typography sx={{ fontWeight: 700, fontSize: 17 }}>{title}</Typography>
+      <Typography sx={{ fontWeight: 700, fontSize: 17 }}>
+        {title}
+      </Typography>
       <Typography variant="body2" color="text.secondary">
         {subtitle}
       </Typography>
@@ -162,7 +165,8 @@ export default function ProfileContent() {
   ];
 
   return (
-    <Box>
+    <Box className="profile-content">
+      {/* Judul */}
       <Box sx={{ mb: 3 }}>
         <Typography variant="h5" sx={{ fontWeight: 700 }}>
           Pengaturan Profil
@@ -172,6 +176,8 @@ export default function ProfileContent() {
           Kelola informasi akun dan profil pengguna.
         </Typography>
       </Box>
+
+      {/* Kartu Profil */}
       <Paper
         elevation={0}
         sx={{
@@ -182,6 +188,7 @@ export default function ProfileContent() {
           mb: 3,
         }}
       >
+        {/* Banner */}
         <Box
           sx={{
             height: { xs: 100, sm: 130 },
@@ -219,6 +226,7 @@ export default function ProfileContent() {
                 flexWrap: "wrap",
               }}
             >
+              {/* Foto Profil */}
               <Box sx={{ position: "relative" }}>
                 <Avatar
                   sx={{
@@ -247,6 +255,7 @@ export default function ProfileContent() {
                 </IconButton>
               </Box>
 
+              {/* Informasi Profil */}
               <Box sx={{ pt: { xs: 0, sm: 7 } }}>
                 <Box
                   sx={{
@@ -290,6 +299,7 @@ export default function ProfileContent() {
             </Box>
           </Box>
 
+          {/* Statistik Profil */}
           <Box
             sx={{
               display: "grid",
@@ -318,6 +328,7 @@ export default function ProfileContent() {
         </Box>
       </Paper>
 
+      {/* Informasi Profil dan Form */}
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 4 }}>
           <Paper elevation={0} sx={cardSx}>
@@ -342,26 +353,31 @@ export default function ProfileContent() {
                 label="NIP"
                 value={profile.nip}
               />
+
               <InfoRow
                 icon={<EmailIcon fontSize="small" />}
                 label="Email"
                 value={profile.email}
               />
+
               <InfoRow
                 icon={<PhoneIcon fontSize="small" />}
                 label="Telepon"
                 value={profile.telepon}
               />
+
               <InfoRow
                 icon={<CalendarMonthIcon fontSize="small" />}
                 label="Tanggal Lahir"
                 value={tanggalLahirText}
               />
+
               <InfoRow
                 icon={<SchoolIcon fontSize="small" />}
                 label="Instansi"
                 value="SMK Telkom Malang"
               />
+
               <InfoRow
                 icon={<LocationOnIcon fontSize="small" />}
                 label="Alamat"
@@ -373,6 +389,7 @@ export default function ProfileContent() {
 
         <Grid size={{ xs: 12, md: 8 }}>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+            {/* Informasi Pribadi */}
             <Paper elevation={0} sx={cardSx}>
               <SectionTitle
                 title="Informasi Pribadi"
@@ -475,7 +492,11 @@ export default function ProfileContent() {
                 </Grid>
 
                 <Box
-                  sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    mt: 3,
+                  }}
                 >
                   <Button
                     type="submit"
@@ -489,6 +510,7 @@ export default function ProfileContent() {
               </Box>
             </Paper>
 
+            {/* Informasi Akun */}
             <Paper elevation={0} sx={cardSx}>
               <SectionTitle
                 title="Informasi Akun"
@@ -521,7 +543,11 @@ export default function ProfileContent() {
                 </Grid>
 
                 <Box
-                  sx={{ display: "flex", justifyContent: "flex-end", mt: 3 }}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    mt: 3,
+                  }}
                 >
                   <Button
                     type="submit"
@@ -538,6 +564,7 @@ export default function ProfileContent() {
         </Grid>
       </Grid>
 
+      {/* Notifikasi */}
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}

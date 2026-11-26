@@ -287,10 +287,25 @@ body {
 }
 
 /* warna ikon per kartu */
-.stat-icon.tone-red   { background: #fdecec; color: #b91c1c; }
-.stat-icon.tone-blue  { background: #e0ecff; color: #1d4ed8; }
-.stat-icon.tone-pink  { background: #fce7f3; color: #be185d; }
-.stat-icon.tone-amber { background: #fef3c7; color: #92400e; }
+.stat-icon.tone-red {
+  background: #fdecec;
+  color: #b91c1c;
+}
+
+.stat-icon.tone-blue {
+  background: #e0ecff;
+  color: #1d4ed8;
+}
+
+.stat-icon.tone-pink {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.stat-icon.tone-amber {
+  background: #fef3c7;
+  color: #92400e;
+}
 
 .stat-info {
   display: flex;
@@ -545,7 +560,7 @@ body {
   color: var(--text-main);
 }
 
-.gender-legend > div {
+.gender-legend>div {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -558,8 +573,13 @@ body {
   flex: none;
 }
 
-.dot-male { background: #1d4ed8; }
-.dot-female { background: #be185d; }
+.dot-male {
+  background: #1d4ed8;
+}
+
+.dot-female {
+  background: #be185d;
+}
 
 /* DATA SISWA PAGE */
 
@@ -567,9 +587,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 30px;
 }
 
-.data-siswa-content > .MuiBox-root:first-child {
+@media (max-width: 768px) {
+  .data-siswa-content {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-siswa-content {
+    padding: 17px 12px;
+  }
+}
+
+.data-siswa-content>.MuiBox-root:first-child {
   margin-bottom: 0 !important;
 }
 
@@ -605,6 +638,10 @@ body {
 }
 
 /* PROFILE PAGE */
+
+.profile-content {
+  padding: 30px;
+}
 
 .profile-content .MuiPaper-root {
   border-color: var(--border);
@@ -774,7 +811,7 @@ body {
   }
 
   .stats-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
